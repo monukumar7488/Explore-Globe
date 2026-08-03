@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monu Kumar Portfolio</title>
+   
+</head>
+<style>
+  body {
+  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  color: #fff;
+  background: linear-gradient(to right, #89c2d9, #468faf, #2a6f97);
+  background-attachment: fixed;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px;
+  background: #2a6f97;
+  border-bottom:  1px solid rgba(255, 255, 255, 0.2);
+}
+
+header img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+}
+
+header h1 {
+  margin: 15px 0 5px 0;
+  color: #abc4ff;
+  font-size: 2.3em;
+  letter-spacing: 1px;
+}
+
+header p {
+  color: #e0e0e0;
+  font-size: 1.1em;
+}
+
+.card {
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 25px;
+  margin: 25px auto;
+  max-width: 900px;
+  transition: transform 0.2s ease, background 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+h2 {
+  color: #ffb6c1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+ul, ol {
+  margin-left: 20px;
+  line-height: 1.7;
+}
+
+a {
+  color: #00e5ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #ff4081;
+  text-decoration: underline;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, textarea, select {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1em;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #eee;
+}
+
+button {
+  background-color: #00e5ff;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 160px;
+}
+
+button:hover {
+  background-color: #ff4081;
+  color: white;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #468faf;
+  border-radius: 6px;
+  background-color: lightblue;
+  color: #f0f0f0; 
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+  appearance: none;
+}
+
+
+select option {
+  background-color: #468faf;
+  color: #f0f0f0; 
+}
+
+
+select option:hover {
+  background-color: #468faf;
+}
+
+
+select:focus {
+  border-color: #00bcd4;
+  box-shadow: 0 0 8px rgba(0, 188, 212, 0.4);
+}
+
+
+.media {
+  text-align: center;
+}
+
+audio, video {
+  width: 90%;
+  max-width: 400px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px #468faf;
+}
+
+
+footer {
+  text-align: center;
+  padding: 15px;
+  color: #fff;
+  opacity: 0.8;
+  border-top: 1px solid #468faf;
+  margin-top: 40px;
+}
+
+
+@media (max-width: 768px) {
+  .card {
+    margin: 20px;
+  }
+}
+
+</style>
+<body>
+
+  <header>
+    <img src="monu_photo.jpeg" alt="Monu Kumar">
+    <h1>Monu Kumar</h1>
+    <p>MCA Student | Aspiring Software Engineer | Web Development Enthusiast</p>
+  </header>
+
+  <div class="card">
+    <h2>About Me</h2>
+    <p>
+      I'm <b>Monu Kumar</b>, a passionate and detail-oriented student currently pursuing my 
+      <b>Master of Computer Applications (MCA)</b> from <b>KIET, Ghaziabad</b>.  
+      I have a strong interest in software development, problem-solving, and creating modern, 
+      user-friendly applications. I enjoy learning new technologies and continuously improving my skills 
+      to become an innovative software engineer.
+    </p>
+    <p>
+      <a href="https://www.linkedin.com/in/monukumar7488/" target="_blank">🔗 Visit My LinkedIn Profile</a>
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Education</h2>
+    <ul>
+      <li><b>MCA</b> – KIET Group of Institutions, Ghaziabad (Ongoing)</li>
+      <li><b>BCA</b> – Patliputra University, Patna (2022–2025)</li>
+      <li><b>Class 12th</b> – BSEB (2022)</li>
+      <li><b>Class 10th</b> – CBSE (2020)</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Skills</h2>
+    <ul>
+      <li><b>Programming Languages:</b> C, C++, Java, Python</li>
+      <li><b>Web Technologies:</b> HTML, CSS, JavaScript</li>
+      <li><b>Tools:</b> Visual Studio Code, GitHub</li>
+      <li><b>Soft Skills:</b> Communication, Teamwork, Problem Solving</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Career Goals</h2>
+    <p>
+      My goal is to become a <b>skilled software engineer</b> capable of building innovative and impactful applications.  
+      I aim to contribute to meaningful projects that solve real-world problems while continuously learning 
+      and growing as a developer.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Visitor Registration</h2>
+    <p>Please fill out your details below to register your visit.</p>
+    <form onsubmit="return validateVisitorForm()">
+      <input type="text" id="vname" placeholder="Full Name" required>
+      <input type="email" id="vemail" placeholder="Email Address" required>
+      <input type="number" id="vphone" placeholder="Phone Number" pattern="[0-9]{10}" required>
+      <input type="text" id="vaddress" placeholder="Address" required>
+      <input type="text" id="vpurpose" placeholder="Purpose of Visit" required>
+      <button type="submit">Register Visitor</button>
+    </form>
+  </div>
+
+  <div class="card">
+    <h2>Service Request</h2>
+    <p>Submit your service or assistance request here.</p>
+    <form onsubmit="return validateServiceForm()">
+      <input type="text" id="sname" placeholder="Visitor Name" required>
+      <select id="stype" required>
+        <option value="" >Select Service Type</option>
+        <option value="Guidance">Guidance</option>
+        <option value="Information">Information</option>
+        <option value="Technical Support">Technical Support</option>
+        <option value="Other">Other</option>
+      </select>
+      <textarea id="sdetails" rows="4" placeholder="Describe your request..." required></textarea>
+      <button type="submit">Submit Request</button>
+    </form>
+  </div>
+
+  <div class="card media">
+    <h2>Media Section</h2>
+    <p>Here are a few of my favorite media clips and sounds that inspire my work.</p>
+    <audio src="Bensound_Dreams_Ringtone.mp3" controls></audio><br>
+  </div>
+
+  <footer>
+    © 2026 Monu Kumar | Made with &hearts;
+  </footer>
+
+  <script>
+    function validateVisitorForm() {
+      alert("Visitor Registered Successfully!");
+      return false;
+    }
+
+    function validateServiceForm() {
+      alert("Service Request Submitted Successfully!");
+      return false;
+    }
+  </script>
+</body>
+</html>

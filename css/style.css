@@ -1,0 +1,750 @@
+/* ==========================================
+   EXPLORE GLOBE 2.0
+   Modern Travel Website
+========================================== */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap');
+
+/* ================= Variables ================= */
+
+:root {
+
+    --primary: #0d6efd;
+    --secondary: #ff9f1c;
+    --success: #10b981;
+    --danger: #dc3545;
+
+    --dark: #0f172a;
+
+    --light: #f8fafc;
+
+    --gray: #6c757d;
+
+    --white: #ffffff;
+
+    --shadow: 0 15px 40px rgba(0, 0, 0, .12);
+
+    --radius: 20px;
+
+    --transition: .35s ease;
+
+}
+
+/* ================= Reset ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+
+    background: var(--light);
+
+    color: #222;
+
+    overflow-x: hidden;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-weight: 700;
+
+}
+
+section {
+
+    padding: 90px 0;
+
+}
+
+img {
+
+    max-width: 100%;
+
+    display: block;
+
+}
+
+a {
+
+    text-decoration: none;
+
+}
+
+/* ================= Buttons ================= */
+
+.btn {
+
+    border-radius: 50px;
+
+    padding: 12px 28px;
+
+    transition: var(--transition);
+
+    font-weight: 600;
+
+}
+
+.btn:hover {
+
+    transform: translateY(-3px);
+
+}
+
+.btn-primary {
+
+    background: var(--primary);
+
+    border: none;
+
+}
+
+.btn-warning {
+
+    color: #fff;
+
+}
+
+/* ================= Navbar ================= */
+
+.glass-navbar {
+
+    background: rgba(255, 255, 255, .10);
+
+    backdrop-filter: blur(14px);
+
+    transition: .4s;
+
+    padding: 15px 0;
+
+}
+
+.glass-navbar.scrolled {
+
+    background: rgba(13, 110, 253, .95);
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, .15);
+
+}
+
+.navbar-brand {
+
+    font-size: 1.6rem;
+
+    font-weight: 700;
+
+}
+
+.nav-link {
+
+    color: #fff !important;
+
+    margin: 0 10px;
+
+    position: relative;
+
+    transition: .3s;
+
+}
+
+.nav-link::after {
+
+    content: "";
+
+    width: 0;
+
+    height: 2px;
+
+    background: #ffc107;
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -5px;
+
+    transition: .3s;
+
+}
+
+.nav-link:hover::after {
+
+    width: 100%;
+
+}
+
+/* ================= Hero ================= */
+
+.hero {
+
+    position: relative;
+
+    height: 100vh;
+
+    overflow: hidden;
+
+}
+
+.hero-video {
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, .55);
+
+}
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 10;
+
+}
+
+.hero h1 {
+
+    line-height: 1.1;
+
+}
+
+.hero p {
+
+    max-width: 700px;
+
+}
+
+/* ================= Search Card ================= */
+
+.booking-card {
+
+    border-radius: 20px;
+
+    background: #fff;
+
+}
+
+.booking-card input,
+
+.booking-card select {
+
+    height: 55px;
+
+    border-radius: 12px;
+
+}
+
+/* //new design here rebuilt */
+/* ================= Category ================= */
+
+.category-card {
+
+    background: #fff;
+
+    border-radius: 20px;
+
+    padding: 40px 25px;
+
+    text-align: center;
+
+    box-shadow: var(--shadow);
+
+    transition: var(--transition);
+
+}
+
+.category-card:hover {
+
+    transform: translateY(-12px);
+
+}
+
+.category-card i {
+
+    font-size: 45px;
+
+    color: var(--primary);
+
+    margin-bottom: 20px;
+
+}
+
+.category-card h5 {
+
+    font-weight: 700;
+
+}
+
+/* ================= Why Us ================= */
+
+.feature-icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: var(--primary);
+
+    color: #fff;
+
+    font-size: 28px;
+
+}
+
+.destination-card {
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    transition: .4s;
+
+    box-shadow: var(--shadow);
+
+}
+
+.destination-card:hover {
+
+    transform: translateY(-12px);
+
+}
+
+.destination-card img {
+
+    height: 280px;
+
+    object-fit: cover;
+
+    transition: .5s;
+
+}
+
+.destination-card:hover img {
+
+    transform: scale(1.08);
+
+}
+
+.destination-card .card-body {
+
+    padding: 25px;
+
+}
+
+.package-card {
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    transition: .4s;
+
+}
+
+.package-card:hover {
+
+    transform: translateY(-12px);
+
+    box-shadow: 0 25px 55px rgba(0, 0, 0, .2) !important;
+
+}
+
+.package-card .card-header {
+
+    padding: 35px;
+
+}
+
+.package-card h1 {
+
+    font-size: 3rem;
+
+}
+
+/* ==========================================
+   OFFER SECTION
+========================================== */
+
+.offer-section {
+    background: linear-gradient(135deg, #0d6efd, #6610f2);
+    overflow: hidden;
+}
+
+.offer-section img {
+    transition: .5s;
+}
+
+.offer-section img:hover {
+    transform: scale(1.05);
+}
+
+/* ==========================================
+   GALLERY
+========================================== */
+
+.gallery-img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, .25);
+}
+
+/* ==========================================
+   TESTIMONIALS
+========================================== */
+
+.carousel-item .card {
+    border-radius: 25px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #0d6efd;
+    border-radius: 50%;
+    padding: 18px;
+}
+
+/* ==========================================
+   STATS
+========================================== */
+
+.stats-section {
+    background: linear-gradient(135deg, #0d6efd, #6610f2);
+}
+
+.stats-section h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.stats-section p {
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* ==========================================
+   FAQ
+========================================== */
+
+.accordion-button {
+    font-weight: 600;
+}
+
+.accordion-button:not(.collapsed) {
+    background: #0d6efd;
+    color: #fff;
+}
+
+/* ==========================================
+   NEWSLETTER
+========================================== */
+
+.input-group input {
+    height: 58px;
+}
+
+.input-group button {
+    width: 180px;
+}
+
+/* ==========================================
+   DONATION
+========================================== */
+
+.donation-section img {
+    border-radius: 20px;
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+    background: #0f172a;
+}
+
+footer h3,
+footer h5 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+footer p,
+footer li {
+    color: #ccc;
+}
+
+footer a {
+    transition: .3s;
+}
+
+footer a:hover {
+    color: #ffc107 !important;
+}
+
+/* ==========================================
+   SCROLL TO TOP
+========================================== */
+
+#topBtn {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 55px;
+    height: 55px;
+    display: none;
+    border: none;
+    z-index: 9999;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
+}
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 1s;
+}
+
+.fade-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:991px) {
+
+    .hero {
+        height: auto;
+        padding-top: 120px;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .booking-card {
+        margin-top: 30px;
+    }
+
+    .display-5 {
+        font-size: 2rem;
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .gallery-img {
+        height: 220px;
+    }
+
+    .stats-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .package-card {
+        margin-bottom: 30px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+}
+
+@media(max-width:576px) {
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .booking-card .row>div {
+        margin-bottom: 12px;
+    }
+
+}
+
+/* ABOUT HERO */
+
+.about-hero {
+
+    height: 70vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+
+        linear-gradient(rgba(0, 0, 0, .55),
+            rgba(0, 0, 0, .55)),
+
+        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+/* ================= TEAM ================= */
+
+.team-card {
+
+    transition: .4s;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+.team-card:hover {
+
+    transform: translateY(-12px);
+
+    box-shadow: 0 25px 45px rgba(0, 0, 0, .18) !important;
+
+}
+
+.team-card img {
+
+    border: 5px solid #fff;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .2);
+
+}
+
+/* ================= ABOUT PAGE ================= */
+
+.about-hero h1 {
+
+    font-size: 4rem;
+
+}
+
+.about-hero p {
+
+    font-size: 1.3rem;
+
+}
+
+@media(max-width:768px) {
+
+    .about-hero h1 {
+
+        font-size: 2.5rem;
+
+    }
+
+}
+.destination-card {
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.35s ease;
+}
+
+.destination-card img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.destination-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.18) !important;
+}
+
+.destination-card .badge {
+    font-size: 0.8rem;
+}
+/* CONTACT */
+
+.contact-card{
+    border-radius:20px;
+    transition:.35s ease;
+}
+
+.contact-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.15)!important;
+}
+
+.contact-card i{
+    transition:.3s;
+}
+
+.contact-card:hover i{
+    transform:scale(1.15);
+}
+
+.form-control,
+textarea{
+    border-radius:12px;
+    padding:14px;
+}

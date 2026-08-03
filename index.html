@@ -1,0 +1,898 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Explore Globe | Travel Beyond Boundaries</title>
+
+    <link rel="icon" href="./files/logo.png" />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet" 
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <!-- ================= HERO ================= -->
+
+    <header class="hero">
+      <video autoplay muted loop playsinline class="hero-video">
+        <source src="./files/bgvid4.mp4" type="video/mp4" />
+      </video>
+
+      <div class="hero-overlay"></div>
+
+      <!-- Navbar -->
+
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top glass-navbar">
+        <div class="container">
+          <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+            <img src="./files/logo.png" width="55" class="me-2" />
+
+            Explore Globe
+          </a>
+
+          <button
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="#home"> Home </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#destinations"> Destinations </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#packages"> Packages </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="./about.html"> About </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="./contact.html"> Contact </a>
+              </li>
+            </ul>
+
+            <div class="d-flex">
+              <a href="./login.html" class="btn btn-outline-light me-2">
+                Login
+              </a>
+
+              <a href="./signup.html" class="btn btn-warning"> Sign Up </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hero -->
+
+      <div class="container hero-content">
+        <div class="row align-items-center min-vh-100">
+          <div class="col-lg-7 text-white">
+            <span class="badge bg-warning text-dark px-3 py-2 mb-3">
+              🌍 Trusted by 20,000+ Travelers
+            </span>
+
+            <h1 class="display-2 fw-bold">
+              Discover Amazing Places
+
+              <span class="text-warning"> Around The World </span>
+            </h1>
+
+            <p class="lead my-4">
+              Book flights, hotels and unforgettable travel experiences. Explore
+              Globe helps you plan your dream vacation with the best deals and
+              premium destinations.
+            </p>
+
+            <div class="d-flex flex-wrap gap-3">
+              <a href="./register.html" class="btn btn-primary btn-lg">
+                Book Your Trip
+              </a>
+
+              <a href="#destinations" class="btn btn-outline-light btn-lg">
+                Explore Destinations
+              </a>
+            </div>
+
+            <!-- Booking Search -->
+
+            <div class="card border-0 shadow-lg mt-5 booking-card">
+              <div class="card-body p-4">
+                <div class="row g-3">
+                  <div class="col-md-3">
+                    <input class="form-control" placeholder="Destination" />
+                  </div>
+
+                  <div class="col-md-2">
+                    <input type="date" class="form-control" />
+                  </div>
+
+                  <div class="col-md-2">
+                    <input type="date" class="form-control" />
+                  </div>
+
+                  <div class="col-md-2">
+                    <select class="form-select">
+                      <option>Guests</option>
+
+                      <option>1</option>
+
+                      <option>2</option>
+
+                      <option>3</option>
+
+                      <option>Family</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-3">
+                    <button class="btn btn-warning w-100">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+
+                      Search
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ================= CATEGORIES ================= -->
+
+    <section class="py-5 bg-white">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="text-primary fw-semibold">POPULAR CATEGORIES</span>
+
+          <h2 class="display-5 fw-bold mt-2">Find Your Perfect Journey</h2>
+
+          <p class="text-muted">
+            Discover amazing experiences crafted for every type of traveler.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-3 col-6">
+            <div class="category-card">
+              <i class="fa-solid fa-plane"></i>
+              <h5>Flights</h5>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="category-card">
+              <i class="fa-solid fa-hotel"></i>
+              <h5>Hotels</h5>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="category-card">
+              <i class="fa-solid fa-mountain-sun"></i>
+              <h5>Adventure</h5>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-6">
+            <div class="category-card">
+              <i class="fa-solid fa-ship"></i>
+              <h5>Cruises</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WHY CHOOSE US ================= -->
+
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <img
+              src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80"
+              class="img-fluid rounded-4 shadow-lg"
+              alt="Travel"
+            />
+          </div>
+
+          <div class="col-lg-6">
+            <span class="text-primary fw-semibold"> WHY CHOOSE US </span>
+
+            <h2 class="display-5 fw-bold my-3">Travel With Confidence</h2>
+
+            <p class="text-muted">
+              Explore Globe offers unforgettable travel experiences, trusted
+              bookings, premium destinations, and 24/7 support to make every
+              journey smooth and memorable.
+            </p>
+
+            <div class="row mt-4">
+              <div class="col-6 mb-4">
+                <h5>
+                  <i class="fa-solid fa-circle-check text-success"></i>
+
+                  Best Price
+                </h5>
+
+                <p class="text-muted">
+                  Affordable packages with no hidden charges.
+                </p>
+              </div>
+
+              <div class="col-6 mb-4">
+                <h5>
+                  <i class="fa-solid fa-headset text-primary"></i>
+
+                  24×7 Support
+                </h5>
+
+                <p class="text-muted">Travel experts always ready to help.</p>
+              </div>
+
+              <div class="col-6">
+                <h5>
+                  <i class="fa-solid fa-shield-heart text-danger"></i>
+
+                  Safe Journey
+                </h5>
+
+                <p class="text-muted">Secure booking and verified partners.</p>
+              </div>
+
+              <div class="col-6">
+                <h5>
+                  <i class="fa-solid fa-earth-asia text-warning"></i>
+
+                  Worldwide
+                </h5>
+
+                <p class="text-muted">Destinations across the globe.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DESTINATIONS ================= -->
+
+    <section id="destinations" class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="text-primary fw-semibold"> TOP DESTINATIONS </span>
+
+          <h2 class="display-5 fw-bold">Explore Popular Places</h2>
+        </div>
+
+        <div class="row g-4">
+          <!-- Paris -->
+
+          <div class="col-lg-4">
+            <div class="card destination-card border-0 shadow">
+              <img
+                src="https://images.unsplash.com/photo-1431274172761-fca41d930114?auto=format&fit=crop&w=900&q=80"
+                class="card-img-top"
+                alt="Paris"
+              />
+
+              <div class="card-body">
+                <h5>🇫🇷 Paris</h5>
+
+                <p class="text-muted">
+                  Romantic city with iconic landmarks and beautiful streets.
+                </p>
+
+                <div class="d-flex justify-content-between align-items-center">
+                  <strong class="text-primary"> Starting ₹29,999 </strong>
+
+                  <a href="locations.html" class="btn btn-primary"> Explore </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bali -->
+
+          <div class="col-lg-4">
+            <div class="card destination-card border-0 shadow">
+              <img
+                src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=900&q=80"
+                class="card-img-top"
+                alt="Bali"
+              />
+
+              <div class="card-body">
+                <h5>🇮🇩 Bali</h5>
+
+                <p class="text-muted">
+                  Relax on tropical beaches with luxury resorts.
+                </p>
+
+                <div class="d-flex justify-content-between">
+                  <strong class="text-primary"> Starting ₹24,999 </strong>
+
+                  <a href="locations.html" class="btn btn-primary"> Explore </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dubai -->
+
+          <div class="col-lg-4">
+            <div class="card destination-card border-0 shadow">
+              <img
+                src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=80"
+                class="card-img-top"
+                alt="Dubai"
+              />
+
+              <div class="card-body">
+                <h5>🇦🇪 Dubai</h5>
+
+                <p class="text-muted">
+                  Luxury shopping, skyscrapers and desert adventures.
+                </p>
+
+                <div class="d-flex justify-content-between">
+                  <strong class="text-primary"> Starting ₹34,999 </strong>
+
+                  <a href="locations.html" class="btn btn-primary"> Explore </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================= PACKAGES ================= -->
+
+    <section id="packages" class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="text-primary fw-semibold"> BEST PACKAGES </span>
+
+          <h2 class="display-5 fw-bold">Choose Your Dream Vacation</h2>
+
+          <p class="text-muted">
+            Affordable packages designed for every traveler.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Silver -->
+
+          <div class="col-lg-4">
+            <div class="card package-card border-0 shadow">
+              <div class="card-header bg-primary text-white text-center py-4">
+                <h3>Silver</h3>
+
+                <h1>₹19,999</h1>
+
+                <span class="badge bg-warning text-dark"> Most Popular </span>
+              </div>
+
+              <div class="card-body">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">✔ 5 Nights</li>
+
+                  <li class="list-group-item">✔ 3-Star Hotel</li>
+
+                  <li class="list-group-item">✔ Airport Pickup</li>
+
+                  <li class="list-group-item">✔ Breakfast Included</li>
+
+                  <li class="list-group-item">✔ Local Tour Guide</li>
+                </ul>
+
+                <a href="register.html" class="btn btn-primary w-100 mt-4">
+                  Book Now
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gold -->
+
+          <div class="col-lg-4">
+            <div class="card package-card border-0 shadow">
+              <div class="card-header bg-warning text-dark text-center py-4">
+                <h3>Gold</h3>
+
+                <h1>₹29,999</h1>
+              </div>
+
+              <div class="card-body">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">✔ 7 Nights</li>
+
+                  <li class="list-group-item">✔ 4-Star Hotel</li>
+
+                  <li class="list-group-item">✔ All Meals</li>
+
+                  <li class="list-group-item">✔ Adventure Activities</li>
+
+                  <li class="list-group-item">✔ Premium Support</li>
+                </ul>
+
+                <a href="register.html" class="btn btn-warning w-100 mt-4">
+                  Book Now
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Platinum -->
+
+          <div class="col-lg-4">
+            <div class="card package-card border-0 shadow">
+              <div class="card-header bg-danger text-white text-center py-4">
+                <h3>Luxury</h3>
+
+                <h1>₹49,999</h1>
+              </div>
+
+              <div class="card-body">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">✔ 10 Nights</li>
+
+                  <li class="list-group-item">✔ 5-Star Resort</li>
+
+                  <li class="list-group-item">✔ VIP Airport Transfer</li>
+
+                  <li class="list-group-item">✔ Private Guide</li>
+
+                  <li class="list-group-item">✔ Luxury Cruise</li>
+                </ul>
+
+                <a href="register.html" class="btn btn-danger w-100 mt-4">
+                  Book Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="offer-section py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-7">
+            <h2 class="display-5 text-white fw-bold">
+              Get 30% OFF On International Trips
+            </h2>
+
+            <p class="text-white mt-3">
+              Book before the end of this month and enjoy exclusive discounts,
+              free airport pickup, complimentary breakfast, and travel
+              insurance.
+            </p>
+
+            <a href="register.html" class="btn btn-warning btn-lg mt-3">
+              Claim Offer
+            </a>
+          </div>
+
+          <div class="col-lg-5 text-center">
+            <img
+              src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80"
+              class="img-fluid rounded-4 shadow"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-bold">Travel Gallery</h2>
+
+          <p class="text-muted">Memories from our happy travelers.</p>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-md-4">
+            <img
+              src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80"
+              class="img-fluid rounded-4 gallery-img"
+            />
+          </div>
+
+          <div class="col-md-4">
+            <img
+              src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80"
+              class="img-fluid rounded-4 gallery-img"
+            />
+          </div>
+
+          <div class="col-md-4">
+            <img
+              src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=900&q=80"
+              class="img-fluid rounded-4 gallery-img"
+            />
+          </div>
+
+          <div class="col-md-6">
+            <img
+              src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=1200&q=80"
+              class="img-fluid rounded-4 gallery-img"
+            />
+          </div>
+
+          <div class="col-md-6">
+            <img
+              src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1200&q=80"
+              class="img-fluid rounded-4 gallery-img"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================= TESTIMONIALS ================= -->
+
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="text-primary fw-semibold"> TESTIMONIALS </span>
+
+          <h2 class="display-5 fw-bold">What Our Travelers Say</h2>
+
+          <p class="text-muted">
+            Thousands of happy travelers have trusted Explore Globe.
+          </p>
+        </div>
+
+        <div
+          id="testimonialCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <div class="card border-0 shadow-lg rounded-4">
+                    <div class="card-body text-center p-5">
+                      <img
+                        src="https://randomuser.me/api/portraits/men/32.jpg"
+                        class="rounded-circle mb-3"
+                        width="90"
+                      />
+
+                      <h4>Rahul Sharma</h4>
+
+                      <p class="text-warning fs-5">★★★★★</p>
+
+                      <p class="lead">
+                        "Our trip to Bali was unforgettable. Everything was
+                        perfectly planned, from flights to hotels. Highly
+                        recommended!"
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <div class="card border-0 shadow-lg rounded-4">
+                    <div class="card-body text-center p-5">
+                      <img
+                        src="https://randomuser.me/api/portraits/women/44.jpg"
+                        class="rounded-circle mb-3"
+                        width="90"
+                      />
+
+                      <h4>Priya Verma</h4>
+
+                      <p class="text-warning fs-5">★★★★★</p>
+
+                      <p class="lead">
+                        "The customer support team was excellent. We enjoyed
+                        every moment in Switzerland."
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- ================= STATS ================= -->
+
+    <section class="py-5 text-white stats-section">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-3">
+            <h1 class="counter" data-target="25000">0</h1>
+
+            <p>Happy Travelers</p>
+          </div>
+
+          <div class="col-md-3">
+            <h1 class="counter" data-target="120">0</h1>
+
+            <p>Destinations</p>
+          </div>
+
+          <div class="col-md-3">
+            <h1 class="counter" data-target="500">0</h1>
+
+            <p>Luxury Hotels</p>
+          </div>
+
+          <div class="col-md-3">
+            <h1>4.9★</h1>
+
+            <p>Average Rating</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-bold">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="accordion" id="faq">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button"
+                data-bs-toggle="collapse"
+                data-bs-target="#q1"
+              >
+                How do I book a trip?
+              </button>
+            </h2>
+
+            <div
+              id="q1"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#faq"
+            >
+              <div class="accordion-body">
+                Choose a destination, select your package, and complete the
+                booking form.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#q2"
+              >
+                Can I cancel my booking?
+              </button>
+            </h2>
+
+            <div
+              id="q2"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faq"
+            >
+              <div class="accordion-body">
+                Yes. Cancellation policies depend on the package selected.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#q3"
+              >
+                Do you provide travel insurance?
+              </button>
+            </h2>
+
+            <div
+              id="q3"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faq"
+            >
+              <div class="accordion-body">
+                Yes, travel insurance is available with premium packages.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-5 bg-primary text-white">
+      <div class="container text-center">
+        <h2>Subscribe To Our Newsletter</h2>
+
+        <p>Get the latest travel offers and updates.</p>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <div class="input-group">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Enter your email"
+              />
+
+              <button class="btn btn-warning">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h2 class="display-5 fw-bold">Support Education Through Travel</h2>
+
+            <p class="text-muted">
+              Your contribution helps underprivileged children receive quality
+              education and opportunities.
+            </p>
+
+            <a href="#" class="btn btn-primary btn-lg"> Donate Now </a>
+          </div>
+
+          <div class="col-lg-6 text-center">
+            <img
+              src="./files/donationQR.jpg"
+              class="img-fluid rounded-4 shadow"
+              style="max-width: 300px"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-dark text-white pt-5 pb-3">
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-lg-4">
+
+<h3>Explore Globe</h3>
+
+<p>
+
+Discover amazing destinations with comfort, safety, and unforgettable experiences.
+
+</p>
+
+</div>
+
+<div class="col-lg-2">
+
+<h5>Quick Links</h5>
+
+<ul class="list-unstyled">
+
+<li><a href="#" class="text-white text-decoration-none">Home</a></li>
+
+<li><a href="about.html" class="text-white text-decoration-none">About</a></li>
+
+<li><a href="locations.html" class="text-white text-decoration-none">Destinations</a></li>
+
+<li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+
+</ul>
+
+</div>
+
+<div class="col-lg-3">
+
+<h5>Contact</h5>
+
+<p><i class="fas fa-envelope"></i> support@exploreglobe.com</p>
+
+<p><i class="fas fa-phone"></i> +91 9876543210</p>
+
+</div>
+
+<div class="col-lg-3">
+
+<h5>Follow Us</h5>
+
+<a href="#" class="text-white me-3 fs-4"><i class="fab fa-facebook"></i></a>
+
+<a href="#" class="text-white me-3 fs-4"><i class="fab fa-instagram"></i></a>
+
+<a href="#" class="text-white me-3 fs-4"><i class="fab fa-x-twitter"></i></a>
+
+<a href="#" class="text-white fs-4"><i class="fab fa-youtube"></i></a>
+
+</div>
+
+</div>
+
+<hr>
+
+<p class="text-center mb-0">
+
+© 2026 Explore Globe. All Rights Reserved.
+
+</p>
+
+</div>
+
+</footer>
+
+<button id="topBtn" class="btn btn-primary rounded-circle">
+<i class="fas fa-arrow-up"></i>
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./js/script.js"></script>
+
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./js/script.js"></script>
+  </body>
+</html>

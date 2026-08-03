@@ -1,0 +1,94 @@
+body{
+
+margin:0;
+
+font-family:Poppins,sans-serif;
+
+background:url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80");
+
+background-size:cover;
+
+background-position:center;
+
+height:100vh;
+
+}
+
+.login-overlay{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:rgba(0,0,0,.45);
+
+}
+
+.login-card{
+
+width:430px;
+
+padding:40px;
+
+border-radius:20px;
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(15px);
+
+color:#fff;
+
+box-shadow:0 20px 45px rgba(0,0,0,.3);
+
+}
+
+.login-card h2{
+
+font-weight:700;
+
+}
+
+.form-control{
+
+height:52px;
+
+border-radius:12px;
+
+}
+
+.btn{
+
+border-radius:12px;
+
+padding:12px;
+
+}
+
+a{
+
+color:#ffc107;
+
+text-decoration:none;
+
+}
+.login-card{
+    max-width:520px;
+    width:95%;
+}
+
+.form-select{
+    height:52px;
+    border-radius:12px;
+}
+
+.form-check-label{
+    color:#fff;
+}
+
+input[type=file]{
+    background:#fff;
+}
