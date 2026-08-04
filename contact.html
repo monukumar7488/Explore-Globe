@@ -8,6 +8,20 @@
 
     <link rel="icon" href="./files/logo.png" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -65,13 +79,35 @@
 
     <!-- Hero -->
 
-    <section class="about-hero">
-      <div class="container text-center text-white">
-        <h1 class="display-3 fw-bold">Contact Us</h1>
+    <!-- Hero -->
 
-        <p class="lead">We're here to help you plan your perfect journey.</p>
-      </div>
-    </section>
+<section class="about-hero">
+
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="files/preview.mp4" type="video/mp4">
+    </video>
+
+    <div class="about-overlay"></div>
+
+    <div class="container h-100 d-flex align-items-center justify-content-center text-center text-white position-relative">
+
+        <div>
+            <h1 class="display-2 fw-bold mb-3">
+                Discover The World With Us
+            </h1>
+
+            <p class="lead mb-4">
+                Creating unforgettable travel experiences across the globe.
+            </p>
+
+            <a href="locations.html" class="btn btn-warning btn-lg px-5">
+                Explore Tours
+            </a>
+        </div>
+
+    </div>
+
+</section>
     <section class="py-5">
       <div class="container">
         <div class="row g-4">
@@ -322,5 +358,15 @@
         </p>
       </div>
     </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    </script>
   </body>
 </html>

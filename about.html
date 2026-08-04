@@ -1,661 +1,946 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>About Us | Explore Globe</title>
 
-    <link rel="icon" href="./files/logo.png">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Bootstrap -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-</head>
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-<body>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
 
-    <body>
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top glass-navbar">
+    <link rel="stylesheet" href="css/style.css" />
 
-            <div class="container">
+    <style>
+      * {
+        font-family: "Poppins", sans-serif;
+      }
 
-                <a class="navbar-brand fw-bold" href="index.html">
+      .about-hero {
+        height: 90vh;
 
-                    <img src="./files/logo.png" width="45" class="me-2">
+        position: relative;
 
-                    Explore Globe
+        overflow: hidden;
 
-                </a>
+        display: flex;
 
-                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+        align-items: center;
 
-                    <span class="navbar-toggler-icon"></span>
+        justify-content: center;
+      }
 
-                </button>
+      .about-hero video {
+        position: absolute;
 
-                <div class="collapse navbar-collapse" id="nav">
+        top: 0;
 
-                    <ul class="navbar-nav ms-auto">
+        left: 0;
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
+        width: 100%;
 
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">About</a>
-                        </li>
+        height: 100%;
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="locations.html">Destinations</a>
-                        </li>
+        object-fit: cover;
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
+        z-index: -2;
+      }
 
-                    </ul>
+      .about-overlay {
+        position: absolute;
 
-                </div>
+        inset: 0;
 
+        background: rgba(0, 0, 0, 0.55);
+
+        z-index: -1;
+      }
+
+      .story-img {
+        border-radius: 25px;
+
+        transition: 0.5s;
+      }
+
+      .story-img:hover {
+        transform: scale(1.03);
+      }
+
+      .icon-box {
+        width: 70px;
+
+        height: 70px;
+
+        background: #0d6efd;
+
+        border-radius: 50%;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        color: #fff;
+
+        font-size: 28px;
+
+        margin: auto;
+      }
+
+      .value-card {
+        transition: 0.4s;
+
+        border: none;
+
+        border-radius: 20px;
+      }
+
+      .value-card:hover {
+        transform: translateY(-12px);
+
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+
+    <nav
+      class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark bg-opacity-50 backdrop-blur"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold fs-3" href="index.html">
+          🌍 Explore Globe
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"> Home </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" href="about.html"> About </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="locations.html"> Destinations </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html"> Contact </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="btn btn-warning ms-3" href="booking.html"> Book Now </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+
+    <section class="about-hero">
+      <video autoplay muted loop playsinline>
+        <source src="files/preview.mp4" type="video/mp4" />
+      </video>
+
+      <div class="about-overlay"></div>
+
+      <div class="container text-center text-white position-relative">
+        <h1 class="display-2 fw-bold">Discover The World With Us</h1>
+        <p class="lead">
+          Creating unforgettable travel experiences across the globe.
+        </p>
+      </div>
+    </section>
+
+    <!-- OUR STORY -->
+
+    <section class="py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6" data-aos="fade-right">
+            <img
+              src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80"
+              class="img-fluid shadow-lg story-img"
+            />
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left">
+            <span class="text-primary fw-bold"> OUR STORY </span>
+
+            <h2 class="display-5 fw-bold my-3">Travel Beyond Boundaries</h2>
+
+            <p class="text-muted">
+              Explore Globe was founded with one simple mission—to inspire
+              people to discover the beauty of our planet. From peaceful beaches
+              to majestic mountains, bustling cities to hidden gems, we believe
+              every journey should become a lifelong memory.
+            </p>
+
+            <p class="text-muted">
+              Over the years, we have helped thousands of travelers create
+              unforgettable experiences with carefully curated destinations,
+              affordable packages, and exceptional customer support.
+            </p>
+
+            <div class="row mt-4">
+              <div class="col-6">
+                <h3 class="text-primary fw-bold">25K+</h3>
+
+                <p>Happy Travelers</p>
+              </div>
+
+              <div class="col-6">
+                <h3 class="text-success fw-bold">120+</h3>
+
+                <p>Countries Covered</p>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================= MISSION & VISION ================= -->
 
-        </nav>
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="text-primary fw-bold"> WHAT WE BELIEVE </span>
 
-        <!-- Hero -->
+          <h2 class="display-5 fw-bold">Mission & Vision</h2>
 
-        <section class="about-hero">
+          <p class="text-muted">
+            Driven by passion, innovation, and customer satisfaction.
+          </p>
+        </div>
 
-            <div class="container text-center text-white">
+        <div class="row g-4">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="card value-card shadow-lg p-4 h-100">
+              <div class="icon-box mb-4">
+                <i class="fas fa-bullseye"></i>
+              </div>
 
-                <h1 class="display-2 fw-bold">
+              <h3 class="fw-bold text-center">Our Mission</h3>
 
-                    About Explore Globe
+              <p class="text-center text-muted">
+                Our mission is to make travel accessible, affordable, and
+                memorable for everyone. We create personalized travel
+                experiences with trusted services, transparent pricing, and
+                world-class support.
+              </p>
+            </div>
+          </div>
 
-                </h1>
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="card value-card shadow-lg p-4 h-100">
+              <div class="icon-box mb-4 bg-success">
+                <i class="fas fa-eye"></i>
+              </div>
 
-                <p class="lead mt-4">
+              <h3 class="fw-bold text-center">Our Vision</h3>
 
-                    Creating unforgettable journeys across the world.
+              <p class="text-center text-muted">
+                To become one of the world's most trusted travel platforms by
+                combining technology, innovation, and customer-centric services
+                that inspire people to explore the globe.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- ================= CORE VALUES ================= -->
+
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="text-primary fw-bold"> WHY CHOOSE US </span>
+
+          <h2 class="display-5 fw-bold">Our Core Values</h2>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4" data-aos="zoom-in">
+            <div class="card value-card shadow text-center p-4 h-100">
+              <div class="icon-box">
+                <i class="fas fa-heart"></i>
+              </div>
+
+              <h4 class="mt-4">Passion</h4>
+
+              <p class="text-muted">
+                We love helping people discover amazing destinations and
+                unforgettable experiences.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="card value-card shadow text-center p-4 h-100">
+              <div class="icon-box bg-danger">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+
+              <h4 class="mt-4">Trust</h4>
+
+              <p class="text-muted">
+                Secure bookings, transparent pricing, and reliable customer
+                support every step of your journey.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="400">
+            <div class="card value-card shadow text-center p-4 h-100">
+              <div class="icon-box bg-warning text-dark">
+                <i class="fas fa-globe"></i>
+              </div>
+
+              <h4 class="mt-4">Innovation</h4>
+
+              <p class="text-muted">
+                Using modern technology and smart recommendations to create
+                seamless travel planning.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= STATISTICS ================= -->
+
+    <section
+      class="py-5 text-white"
+      style="background: linear-gradient(135deg, #0d6efd, #6610f2)"
+    >
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-3 mb-4" data-aos="fade-up">
+            <i class="fas fa-users fa-3x mb-3"></i>
+
+            <h1 class="fw-bold">25K+</h1>
+
+            <p>Happy Travelers</p>
+          </div>
+
+          <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <i class="fas fa-map-marked-alt fa-3x mb-3"></i>
+
+            <h1 class="fw-bold">120+</h1>
+
+            <p>Destinations</p>
+          </div>
+
+          <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <i class="fas fa-plane-departure fa-3x mb-3"></i>
+
+            <h1 class="fw-bold">500+</h1>
+
+            <p>Tour Packages</p>
+          </div>
+
+          <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <i class="fas fa-star fa-3x mb-3 text-warning"></i>
+
+            <h1 class="fw-bold">4.9★</h1>
+
+            <p>Customer Rating</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= AWARDS ================= -->
+
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="text-primary fw-bold"> OUR ACHIEVEMENTS </span>
+
+          <h2 class="display-5 fw-bold">Awards & Recognition</h2>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4" data-aos="flip-left">
+            <div class="card value-card text-center shadow p-4">
+              <i class="fas fa-trophy fa-4x text-warning mb-4"></i>
+
+              <h4>Best Travel Startup</h4>
+
+              <p class="text-muted">
+                Awarded for innovation in travel technology and customer
+                experience.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="flip-left" data-aos-delay="200">
+            <div class="card value-card text-center shadow p-4">
+              <i class="fas fa-medal fa-4x text-primary mb-4"></i>
+
+              <h4>Trusted Brand</h4>
+
+              <p class="text-muted">
+                Recognized by thousands of travelers for exceptional service
+                quality.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="flip-left" data-aos-delay="400">
+            <div class="card value-card text-center shadow p-4">
+              <i class="fas fa-award fa-4x text-success mb-4"></i>
+
+              <h4>Top Rated Agency</h4>
+
+              <p class="text-muted">
+                Consistently rated among the most trusted travel agencies
+                worldwide.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================= OUR TEAM ================= -->
+
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="text-primary fw-bold"> OUR EXPERTS </span>
+
+          <h2 class="display-5 fw-bold">Meet Our Team</h2>
+
+          <p class="text-muted">
+            Dedicated professionals passionate about making every journey
+            unforgettable.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Team Member 1 -->
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+            <div class="card border-0 shadow-lg text-center h-100">
+              <img
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80"
+                class="card-img-top"
+                style="height: 350px; object-fit: cover"
+              />
+
+              <div class="card-body">
+                <h4 class="fw-bold">David Wilson</h4>
+
+                <p class="text-primary">Founder & CEO</p>
+
+                <p class="text-muted">
+                  Leading Explore Globe with a vision to inspire travelers
+                  worldwide.
                 </p>
 
+                <div class="mt-3">
+                  <a href="#" class="text-dark me-3"
+                    ><i class="fab fa-facebook fa-lg"></i
+                  ></a>
+
+                  <a href="#" class="text-dark me-3"
+                    ><i class="fab fa-linkedin fa-lg"></i
+                  ></a>
+
+                  <a href="#" class="text-dark"
+                    ><i class="fab fa-instagram fa-lg"></i
+                  ></a>
+                </div>
+              </div>
             </div>
-
-        </section>
-
-        <!-- Story -->
-
-        <section class="py-5">
-
-            <div class="container">
-
-                <div class="row align-items-center">
-
-                    <div class="col-lg-6">
-
-                        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80"
-                            class="img-fluid rounded-4 shadow">
-
-                    </div>
-
-                    <div class="col-lg-6">
-
-                        <span class="text-primary fw-semibold">
-
-                            OUR STORY
-
-                        </span>
-
-                        <h2 class="display-5 fw-bold my-3">
-
-                            We Make Travel Easy
-
-                        </h2>
-
-                        <p class="text-muted">
-
-                            Explore Globe was created with one mission:
-                            to help people discover beautiful destinations
-                            without worrying about planning.
-
-                            We provide affordable packages,
-                            premium hotels,
-                            trusted guides,
-                            and unforgettable experiences.
-
-                        </p>
-
-                        <a href="locations.html" class="btn btn-primary">
-
-                            Explore Destinations
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-        <section class="py-5 bg-light">
-
-            <div class="container">
-
-                <div class="row g-4">
-
-                    <div class="col-lg-6">
-
-                        <div class="card border-0 shadow h-100">
-
-                            <div class="card-body p-5">
-
-                                <i class="fa-solid fa-bullseye fa-3x text-primary mb-4"></i>
-
-                                <h3>
-
-                                    Our Mission
-
-                                </h3>
-
-                                <p>
-
-                                    To make travel simple,
-                                    affordable,
-                                    safe,
-                                    and memorable for everyone.
-
-                                </p>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-6">
-
-                        <div class="card border-0 shadow h-100">
-
-                            <div class="card-body p-5">
-
-                                <i class="fa-solid fa-earth-asia fa-3x text-success mb-4"></i>
-
-                                <h3>
-
-                                    Our Vision
-
-                                </h3>
-
-                                <p>
-
-                                    To become one of the world's
-                                    most trusted travel booking platforms.
-
-                                </p>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-        <section class="py-5">
-
-            <div class="container">
-
-                <div class="text-center mb-5">
-
-                    <h2 class="display-5 fw-bold">
-
-                        Why Choose Explore Globe?
-
-                    </h2>
-
-                </div>
-
-                <div class="row text-center">
-
-                    <div class="col-md-3">
-
-                        <i class="fa-solid fa-plane fa-3x text-primary"></i>
-
-                        <h4 class="mt-3">
-
-                            Flights
-
-                        </h4>
-
-                    </div>
-
-                    <div class="col-md-3">
-
-                        <i class="fa-solid fa-hotel fa-3x text-success"></i>
-
-                        <h4 class="mt-3">
-
-                            Hotels
-
-                        </h4>
-
-                    </div>
-
-                    <div class="col-md-3">
-
-                        <i class="fa-solid fa-map-location-dot fa-3x text-warning"></i>
-
-                        <h4 class="mt-3">
-
-                            Tours
-
-                        </h4>
-
-                    </div>
-
-                    <div class="col-md-3">
-
-                        <i class="fa-solid fa-headset fa-3x text-danger"></i>
-
-                        <h4 class="mt-3">
-
-                            24×7 Support
-
-                        </h4>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-        <!-- ================= TEAM ================= -->
-
-        <section class="py-5 bg-light">
-
-            <div class="container">
-
-                <div class="text-center mb-5">
-
-                    <span class="text-primary fw-bold">
-                        OUR TEAM
-                    </span>
-
-                    <h2 class="display-5 fw-bold">
-
-                        Meet Our Experts
-
-                    </h2>
-
-                    <p class="text-muted">
-
-                        Our experienced professionals work tirelessly to make every trip memorable.
-
-                    </p>
-
-                </div>
-
-                <div class="row g-4">
-
-                    <div class="col-lg-4">
-
-                        <div class="card border-0 shadow text-center team-card">
-
-                            <img src="https://randomuser.me/api/portraits/men/45.jpg"
-                                class="rounded-circle mx-auto mt-4" width="140" height="140">
-
-                            <div class="card-body">
-
-                                <h4>John Anderson</h4>
-
-                                <p class="text-primary">
-
-                                    Founder & CEO
-
-                                </p>
-
-                                <p>
-
-                                    10+ years of experience in the travel industry.
-
-                                </p>
-
-                                <div>
-
-                                    <i class="fab fa-facebook fs-4 mx-2"></i>
-                                    <i class="fab fa-linkedin fs-4 mx-2"></i>
-                                    <i class="fab fa-instagram fs-4 mx-2"></i>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-4">
-
-                        <div class="card border-0 shadow text-center team-card">
-
-                            <img src="https://randomuser.me/api/portraits/women/65.jpg"
-                                class="rounded-circle mx-auto mt-4" width="140" height="140">
-
-                            <div class="card-body">
-
-                                <h4>Emily Watson</h4>
-
-                                <p class="text-success">
-
-                                    Travel Consultant
-
-                                </p>
-
-                                <p>
-
-                                    Specialist in luxury vacations and honeymoon packages.
-
-                                </p>
-
-                                <div>
-
-                                    <i class="fab fa-facebook fs-4 mx-2"></i>
-                                    <i class="fab fa-linkedin fs-4 mx-2"></i>
-                                    <i class="fab fa-instagram fs-4 mx-2"></i>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-4">
-
-                        <div class="card border-0 shadow text-center team-card">
-
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg"
-                                class="rounded-circle mx-auto mt-4" width="140" height="140">
-
-                            <div class="card-body">
-
-                                <h4>David Wilson</h4>
-
-                                <p class="text-danger">
-
-                                    Operations Head
-
-                                </p>
-
-                                <p>
-
-                                    Ensuring seamless travel experiences for every customer.
-
-                                </p>
-
-                                <div>
-
-                                    <i class="fab fa-facebook fs-4 mx-2"></i>
-                                    <i class="fab fa-linkedin fs-4 mx-2"></i>
-                                    <i class="fab fa-instagram fs-4 mx-2"></i>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-        <section class="py-5">
-
-            <div class="container">
-
-                <div class="text-center mb-5">
-
-                    <h2 class="display-5 fw-bold">
-
-                        Our Achievements
-
-                    </h2>
-
-                </div>
-
-                <div class="row text-center">
-
-                    <div class="col-md-3">
-
-                        <i class="fa-solid fa-users fa-3x text-primary mb-3"></i>
-
-                        <h2 class="counter" data-target="25000">
-
-                            0
-
-                        </h2>
-
-                        <p>
-
-                            Happy Travelers
-
-                        </p>
-
-                    </div>
-
-                    <div class="col-md-3">
-
-                        <i class="fa-solid fa-location-dot fa-3x text-success mb-3"></i>
-
-                        <h2 class="counter" data-target="120">
-
-                            0
-
-                        </h2>
-
-                        <p>
-
-                            Destinations
-
-                        </p>
-
-                    </div>
-
-                    <div class="col-md-3">
-
-                        <i class="fa-solid fa-award fa-3x text-warning mb-3"></i>
-
-                        <h2>
-
-                            15+
-
-                        </h2>
-
-                        <p>
-
-                            Travel Awards
-
-                        </p>
-
-                    </div>
-
-                    <div class="col-md-3">
-
-                        <i class="fa-solid fa-star fa-3x text-danger mb-3"></i>
-
-                        <h2>
-
-                            4.9★
-
-                        </h2>
-
-                        <p>
-
-                            Customer Rating
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-        <section class="py-5 bg-light">
-
-            <div class="container">
-
-                <div class="text-center mb-5">
-
-                    <h2 class="display-5 fw-bold">
-
-                        Traveler Reviews
-
-                    </h2>
-
-                </div>
-
-                <div class="row g-4">
-
-                    <div class="col-lg-4">
-
-                        <div class="card border-0 shadow h-100">
-
-                            <div class="card-body p-4">
-
-                                <p class="text-warning">
-
-                                    ★★★★★
-
-                                </p>
-
-                                <p>
-
-                                    "The booking process was smooth and our vacation to Switzerland was unforgettable."
-
-                                </p>
-
-                                <h5 class="mt-4">
-
-                                    Rahul Sharma
-
-                                </h5>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-4">
-
-                        <div class="card border-0 shadow h-100">
-
-                            <div class="card-body p-4">
-
-                                <p class="text-warning">
-
-                                    ★★★★★
-
-                                </p>
-
-                                <p>
-
-                                    "Excellent customer service and affordable packages. Highly recommended."
-
-                                </p>
-
-                                <h5 class="mt-4">
-
-                                    Priya Gupta
-
-                                </h5>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-4">
-
-                        <div class="card border-0 shadow h-100">
-
-                            <div class="card-body p-4">
-
-                                <p class="text-warning">
-
-                                    ★★★★★
-
-                                </p>
-
-                                <p>
-
-                                    "Our Bali honeymoon was perfectly organized. Thank you Explore Globe."
-
-                                </p>
-
-                                <h5 class="mt-4">
-
-                                    Aman Singh
-
-                                </h5>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-        <section class="py-5 text-center text-white" style="background:linear-gradient(135deg,#0d6efd,#6610f2);">
-
-            <div class="container">
-
-                <h2 class="display-4 fw-bold">
-
-                    Ready For Your Next Adventure?
-
-                </h2>
-
-                <p class="lead mt-3">
-
-                    Discover breathtaking destinations with exclusive deals.
-
+          </div>
+
+          <!-- Team Member 2 -->
+
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
+            <div class="card border-0 shadow-lg text-center h-100">
+              <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=80"
+                class="card-img-top"
+                style="height: 350px; object-fit: cover"
+              />
+
+              <div class="card-body">
+                <h4 class="fw-bold">Sophia Carter</h4>
+
+                <p class="text-success">Travel Consultant</p>
+
+                <p class="text-muted">
+                  Helping customers discover the best destinations at the best
+                  prices.
                 </p>
 
-                <a href="register.html" class="btn btn-warning btn-lg mt-3">
+                <div class="mt-3">
+                  <a href="#" class="text-dark me-3"
+                    ><i class="fab fa-facebook fa-lg"></i
+                  ></a>
 
-                    Book Your Journey
+                  <a href="#" class="text-dark me-3"
+                    ><i class="fab fa-linkedin fa-lg"></i
+                  ></a>
 
-                </a>
-
+                  <a href="#" class="text-dark"
+                    ><i class="fab fa-instagram fa-lg"></i
+                  ></a>
+                </div>
+              </div>
             </div>
+          </div>
 
-        </section>
-    </body>
+          <!-- Team Member 3 -->
 
+          <div
+            class="col-lg-4 col-md-6 mx-auto"
+            data-aos="zoom-in"
+            data-aos-delay="400"
+          >
+            <div class="card border-0 shadow-lg text-center h-100">
+              <img
+                src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=600&q=80"
+                class="card-img-top"
+                style="height: 350px; object-fit: cover"
+              />
+
+              <div class="card-body">
+                <h4 class="fw-bold">James Anderson</h4>
+
+                <p class="text-danger">Operations Manager</p>
+
+                <p class="text-muted">
+                  Ensuring every trip runs smoothly from booking to destination.
+                </p>
+
+                <div class="mt-3">
+                  <a href="#" class="text-dark me-3"
+                    ><i class="fab fa-facebook fa-lg"></i
+                  ></a>
+
+                  <a href="#" class="text-dark me-3"
+                    ><i class="fab fa-linkedin fa-lg"></i
+                  ></a>
+
+                  <a href="#" class="text-dark"
+                    ><i class="fab fa-instagram fa-lg"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= GALLERY ================= -->
+
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="text-primary fw-bold"> EXPLORE </span>
+
+          <h2 class="display-5 fw-bold">Travel Gallery</h2>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4" data-aos="fade-up">
+            <img
+              src="https://images.unsplash.com/photo-1431274172761-fca41d930114?auto=format&fit=crop&w=900&q=80"
+              class="img-fluid rounded-4 shadow"
+            />
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <img
+              src="https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?auto=format&fit=crop&w=900&q=80"
+              class="img-fluid rounded-4 shadow"
+            />
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
+            <img
+              src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=900&q=80"
+              class="img-fluid rounded-4 shadow"
+            />
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up">
+            <img
+              src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=900&q=80"
+              class="img-fluid rounded-4 shadow"
+            />
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <img
+              src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=80"
+              class="img-fluid rounded-4 shadow"
+            />
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
+            <img
+              src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=900&q=80"
+              class="img-fluid rounded-4 shadow"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TRUSTED PARTNERS ================= -->
+
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-bold">Trusted Partners</h2>
+        </div>
+
+        <div class="row text-center align-items-center g-5">
+          <div class="col-md-3">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_Bélo.svg"
+              class="img-fluid"
+              style="height: 50px"
+            />
+          </div>
+
+          <div class="col-md-3">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/b/be/Booking.com_logo.svg"
+              class="img-fluid"
+              style="height: 45px"
+            />
+          </div>
+
+          <div class="col-md-3">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+              class="img-fluid"
+              style="height: 45px"
+            />
+          </div>
+
+          <div class="col-md-3">
+            <img
+              src="https://cdn.simpleicons.org/tripadvisor/34E0A1"
+              class="img-fluid"
+              style="height: 50px"
+              alt="Tripadvisor"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TESTIMONIALS ================= -->
+
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="text-primary fw-bold"> TESTIMONIALS </span>
+
+          <h2 class="display-5 fw-bold">What Our Travelers Say</h2>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4" data-aos="fade-up">
+            <div class="card border-0 shadow-lg p-4 h-100">
+              <img
+                src="https://i.pravatar.cc/100?img=12"
+                class="rounded-circle mx-auto mb-3"
+                width="90"
+              />
+
+              <h5 class="text-center">Emily Johnson</h5>
+
+              <p class="text-warning text-center">★★★★★</p>
+
+              <p class="text-muted text-center">
+                "The Bali package exceeded all expectations. Everything was
+                perfectly organized."
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="card border-0 shadow-lg p-4 h-100">
+              <img
+                src="https://i.pravatar.cc/100?img=33"
+                class="rounded-circle mx-auto mb-3"
+                width="90"
+              />
+
+              <h5 class="text-center">Michael Brown</h5>
+
+              <p class="text-warning text-center">★★★★★</p>
+
+              <p class="text-muted text-center">
+                "Our Switzerland honeymoon was unforgettable. Highly
+                recommended!"
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="card border-0 shadow-lg p-4 h-100">
+              <img
+                src="https://i.pravatar.cc/100?img=45"
+                class="rounded-circle mx-auto mb-3"
+                width="90"
+              />
+
+              <h5 class="text-center">Sarah Wilson</h5>
+
+              <p class="text-warning text-center">★★★★★</p>
+
+              <p class="text-muted text-center">
+                "Excellent customer support and amazing travel packages at
+                affordable prices."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================= CALL TO ACTION ================= -->
+
+    <section class="py-5 text-white position-relative overflow-hidden">
+      <div class="position-absolute top-0 start-0 w-100 h-100">
+        <img
+          src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80"
+          class="w-100 h-100"
+          style="object-fit: cover"
+        />
+
+        <div
+          class="position-absolute top-0 start-0 w-100 h-100"
+          style="background: rgba(0, 0, 0, 0.65)"
+        ></div>
+      </div>
+
+      <div class="container position-relative">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h2 class="display-4 fw-bold mb-4">
+              Ready For Your Next Adventure?
+            </h2>
+
+            <p class="lead mb-4">
+              Join thousands of happy travelers and explore the world's most
+              beautiful destinations with Explore Globe.
+            </p>
+
+            <a href="booking.html" class="btn btn-warning btn-lg px-5 me-3">
+              Book Your Trip
+            </a>
+
+            <a href="contact.html" class="btn btn-outline-light btn-lg px-5">
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= NEWSLETTER ================= -->
+
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="card border-0 shadow-lg rounded-4">
+              <div class="card-body p-5 text-center">
+                <h2 class="fw-bold mb-3">Subscribe to Our Newsletter</h2>
+
+                <p class="text-muted mb-4">
+                  Get exclusive travel offers, destination guides, and exciting
+                  updates delivered straight to your inbox.
+                </p>
+
+                <form>
+                  <div class="input-group input-group-lg">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Enter your email address"
+                    />
+
+                    <button class="btn btn-primary">Subscribe</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="bg-dark text-white pt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <h3 class="fw-bold">🌍 Explore Globe</h3>
+
+            <p class="text-light">
+              Explore Globe helps travelers discover amazing destinations with
+              carefully curated packages, affordable pricing, and unforgettable
+              experiences.
+            </p>
+
+            <div>
+              <a href="#" class="text-white me-3">
+                <i class="fab fa-facebook fa-lg"></i>
+              </a>
+
+              <a href="#" class="text-white me-3">
+                <i class="fab fa-instagram fa-lg"></i>
+              </a>
+
+              <a href="#" class="text-white me-3">
+                <i class="fab fa-twitter fa-lg"></i>
+              </a>
+
+              <a href="#" class="text-white">
+                <i class="fab fa-linkedin fa-lg"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5>Quick Links</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="index.html" class="text-light text-decoration-none"
+                  >Home</a
+                >
+              </li>
+
+              <li>
+                <a href="about.html" class="text-light text-decoration-none"
+                  >About</a
+                >
+              </li>
+
+              <li>
+                <a href="locations.html" class="text-light text-decoration-none"
+                  >Destinations</a
+                >
+              </li>
+
+              <li>
+                <a href="contact.html" class="text-light text-decoration-none"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5>Popular Destinations</h5>
+
+            <ul class="list-unstyled">
+              <li>🇫🇷 Paris</li>
+
+              <li>🇨🇭 Switzerland</li>
+
+              <li>🇯🇵 Japan</li>
+
+              <li>🇦🇪 Dubai</li>
+
+              <li>🇲🇻 Maldives</li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 mb-4">
+            <h5>Contact</h5>
+
+            <p>
+              <i class="fas fa-map-marker-alt me-2"></i>
+
+              Ghaziabad, India
+            </p>
+
+            <p>
+              <i class="fas fa-phone me-2"></i>
+
+              +91 9876543210
+            </p>
+
+            <p>
+              <i class="fas fa-envelope me-2"></i>
+
+              info@exploreglobe.com
+            </p>
+          </div>
+        </div>
+
+        <hr class="border-secondary" />
+
+        <div class="text-center pb-3">
+          <p class="mb-0">© 2026 Explore Globe. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS -->
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+      AOS.init({
+        duration: 1000,
+
+        once: true,
+      });
+    </script>
+  </body>
 </html>
