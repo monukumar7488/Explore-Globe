@@ -1,186 +1,956 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> BOOK NOW |  Explore Globe</title>
+  <head>
+    <meta charset="UTF-8" />
 
-    <link rel="icon" href="./files/logo.png">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Book Your Trip | Explore Globe</title>
 
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-</head>
+    <link rel="icon" href="./files/logo.png" />
 
-<body class="register-body">
+    <!-- Bootstrap -->
 
-<!-- NAVBAR -->
-<nav>
-    <img src="./files/logo.png" class="logo" alt="Logo" title="FirstFlight Travels">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-    <ul class="navbar">
-        <li>
-            <a href="./index.html">Home</a>
-            <a href="./index.html#locations">Locations</a>
-            <a href="./index.html#package">Packages</a>
-            <a href="./about.html">About Us</a>
-            <a href="./contact.html">Contact Us</a>
-            <a href="./login.html">Login</a>
-            <a href="./signup.html">Signup</a>
-        </li>
-    </ul>
-</nav>
+    <!-- Font Awesome -->
 
-<!-- REGISTRATION / BOOKING FORM -->
-<section class="registration">
-    <div class="register-form">
-        <h1> Bookings</h1>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
 
-        <form id="registerForm">
+    <!-- Google Fonts -->
 
-            <input type="text" name="myname1" placeholder="Full Name" required>
-            <input type="email" name="myemail" placeholder="Email Address" required>
-            <input type="tel" name="myphone" id="phonenum" placeholder="Phone Number" required>
-            <input type="number" name="myage" placeholder="Age" required>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-            <h4>Gender</h4>
-            <label>
-                <input type="radio" name="mygender" value="Male" required> Male
-            </label>
-            &nbsp;&nbsp;&nbsp;
-            <label>
-                <input type="radio" name="mygender" value="Female"> Female
-            </label>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-            <h4>Departure</h4>
-            <input type="datetime-local" name="departuredate" required>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-            <h4>Return</h4>
-            <input type="datetime-local" name="returndate" required>
+    <!-- AOS -->
 
-            <h4>Travel Destination</h4>
-            <label><input type="checkbox" name="td" value="Kashmir"> Kashmir</label>
-            <label><input type="checkbox" name="td" value="Istanbul"> Istanbul</label>
-            <label><input type="checkbox" name="td" value="Paris"> Paris</label>
-            <label><input type="checkbox" name="td" value="Bali"> Bali</label>
-            <label><input type="checkbox" name="td" value="Dubai"> Dubai</label>
-            <label><input type="checkbox" name="td" value="Geneva"> Geneva</label>
-            <label><input type="checkbox" name="td" value="Port Blair"> Port Blair</label>
-            <label><input type="checkbox" name="td" value="Rome"> Rome</label>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
-            <br><br>
+    <!-- Custom CSS -->
 
-            <h4>Package</h4>
-            <label><input type="radio" name="locations" value="Bronze" required> Bronze</label>
-            <label><input type="radio" name="locations" value="Silver"> Silver</label>
-            <label><input type="radio" name="locations" value="Gold"> Gold</label>
-            <label><input type="radio" name="locations" value="Platinum"> Platinum</label>
+    <link rel="stylesheet" href="css/style.css" />
 
-            <br><br>
+    <style>
+      body {
+        font-family: Poppins, sans-serif;
+        background: #f8f9fa;
+      }
 
-            <label>
-                <input type="checkbox" checked required>
-                I accept the Terms & Conditions
-            </label>
+      /* Navbar */
 
-            <br><br>
+      .navbar {
+        transition: 0.4s;
+      }
 
-            <input type="submit" value="Submit" class="submitbtn">
+      .navbar-brand img {
+        height: 55px;
+      }
 
-        </form>
-    </div>
-</section>
+      /* Hero */
 
-<!-- FOOTER -->
-<section class="footer">
-    <div class="foot">
-        <div class="footer-content">
+      .booking-hero {
+        position: relative;
+        height: 70vh;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+      }
 
-            <div class="footlinks">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="./register.html"> Book now</a></li>
-                    <li><a href="./login.html">Login</a></li>
-                    <li><a href="./signup.html">Signup</a></li>
-                    <li><a href="./about.html">About Us</a></li>
-                    <li><a href="./contact.html">Contact Us</a></li>
-                </ul>
-            </div>
+      .booking-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80");
+        background-size: cover;
+        background-position: center;
+        transform: scale(1.05);
+      }
 
-            <div class="footlinks">
-                <h4>Connect</h4>
-                <div class="social">
-                    <a href="#"><i class='bx bxl-facebook'></i></a>
-                    <a href="#"><i class='bx bxl-instagram'></i></a>
-                    <a href="#"><i class='bx bxl-twitter'></i></a>
-                    <a href="#"><i class='bx bxl-linkedin'></i></a>
-                    <a href="#"><i class='bx bxl-github'></i></a>
-                </div>
-            </div>
+      .booking-hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.55);
+      }
 
+      .booking-hero .container {
+        position: relative;
+        z-index: 2;
+      }
+
+      .booking-hero h1 {
+        font-size: 4rem;
+        font-weight: 800;
+      }
+
+      .booking-hero p {
+        font-size: 1.2rem;
+        max-width: 650px;
+      }
+
+      /* Booking Card */
+
+      .booking-card {
+        margin-top: -90px;
+        position: relative;
+        z-index: 5;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+        padding: 40px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="./files/logo.png" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"> Home </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="locations.html"> Destinations </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="about.html"> About </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html"> Contact </a>
+            </li>
+
+            <li class="nav-item ms-3">
+              <a href="login.html" class="btn btn-outline-light"> Login </a>
+            </li>
+          </ul>
         </div>
-    </div>
+      </div>
+    </nav>
 
-    <div class="end">
-        <p>
-            Copyright © 2026  Explore Globe All Rights Reserved.
+    <!-- HERO -->
+
+    <section class="booking-hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 text-white">
+            <span class="badge bg-warning text-dark px-3 py-2 mb-3">
+              🌍 Trusted By 25,000+ Travelers
+            </span>
+
+            <h1>Book Your Dream Vacation</h1>
+
+            <p class="my-4">
+              Choose your destination, customize your package, and let Explore
+              Globe create unforgettable travel experiences for you.
+            </p>
+
+            <a href="#bookingForm" class="btn btn-warning btn-lg px-5">
+              Book Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOKING FORM -->
+
+    <section class="pb-5">
+      <div class="container">
+        <div class="booking-card" id="bookingForm">
+          <!-- REGISTRATION / BOOKING FORM -->
+          <div class="row">
+            <!-- Booking Form -->
+
+            <div class="col-lg-8">
+              <div class="bg-white rounded-4 p-4 shadow">
+                <h2 class="fw-bold mb-4">Complete Your Booking</h2>
+
+                <form id="registerForm">
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Full Name</label>
+
+                      <input
+                        type="text"
+                        name="myname1"
+                        class="form-control form-control-lg"
+                        placeholder="John Doe"
+                        required
+                      />
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Email Address</label>
+
+                      <input
+                        type="email"
+                        name="myemail"
+                        class="form-control form-control-lg"
+                        placeholder="john@email.com"
+                        required
+                      />
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Phone Number</label>
+
+                      <input
+                        type="tel"
+                        id="phonenum"
+                        name="myphone"
+                        class="form-control form-control-lg"
+                        placeholder="+91 9876543210"
+                        required
+                      />
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label">Age</label>
+
+                      <input
+                        type="number"
+                        name="myage"
+                        class="form-control form-control-lg"
+                        placeholder="25"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <hr />
+
+                  <h5 class="mb-3">Gender</h5>
+
+                  <div class="mb-4">
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="mygender"
+                        value="Male"
+                        required
+                      />
+
+                      <label class="form-check-label"> Male </label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="mygender"
+                        value="Female"
+                      />
+
+                      <label class="form-check-label"> Female </label>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label"> Departure Date </label>
+
+                      <input
+                        type="datetime-local"
+                        name="departuredate"
+                        class="form-control form-control-lg"
+                        required
+                      />
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label"> Return Date </label>
+
+                      <input
+                        type="datetime-local"
+                        name="returndate"
+                        class="form-control form-control-lg"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <hr />
+
+                  <h5 class="mb-3">Choose Destination</h5>
+
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          name="td"
+                          value="Kashmir"
+                        />
+
+                        Kashmir
+                      </div>
+
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          name="td"
+                          value="Paris"
+                        />
+
+                        Paris
+                      </div>
+
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          name="td"
+                          value="Dubai"
+                        />
+
+                        Dubai
+                      </div>
+
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          name="td"
+                          value="Bali"
+                        />
+
+                        Bali
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          name="td"
+                          value="Rome"
+                        />
+
+                        Rome
+                      </div>
+
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          name="td"
+                          value="Geneva"
+                        />
+
+                        Geneva
+                      </div>
+
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          name="td"
+                          value="Istanbul"
+                        />
+
+                        Istanbul
+                      </div>
+
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          name="td"
+                          value="Port Blair"
+                        />
+
+                        Port Blair
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr />
+
+                  <h5 class="mb-3">Select Package</h5>
+
+                  <div class="row">
+                    <div class="col-md-3">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="locations"
+                          value="Bronze"
+                          required
+                        />
+
+                        Bronze
+                      </div>
+                    </div>
+
+                    <div class="col-md-3">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="locations"
+                          value="Silver"
+                        />
+
+                        Silver
+                      </div>
+                    </div>
+
+                    <div class="col-md-3">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="locations"
+                          value="Gold"
+                        />
+
+                        Gold
+                      </div>
+                    </div>
+
+                    <div class="col-md-3">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="locations"
+                          value="Platinum"
+                        />
+
+                        Platinum
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr />
+
+                  <div class="form-check mb-4">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      required
+                      checked
+                    />
+
+                    <label class="form-check-label">
+                      I accept the Terms & Conditions
+                    </label>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary btn-lg w-100">
+                    Book My Trip
+                  </button>
+                </form>
+              </div>
+            </div>
+            <!-- ================= RIGHT SIDEBAR ================= -->
+
+            <div class="col-lg-4 mt-4 mt-lg-0">
+              <!-- Why Book With Us -->
+
+              <div class="card border-0 shadow rounded-4 mb-4">
+                <div class="card-body p-4">
+                  <h3 class="fw-bold mb-4">Why Book With Us?</h3>
+
+                  <div class="d-flex mb-4">
+                    <i class="fas fa-shield-alt fa-2x text-primary me-3"></i>
+
+                    <div>
+                      <h6 class="fw-bold mb-1">Secure Booking</h6>
+
+                      <small class="text-muted">
+                        Your personal information is completely safe.
+                      </small>
+                    </div>
+                  </div>
+
+                  <div class="d-flex mb-4">
+                    <i class="fas fa-tags fa-2x text-success me-3"></i>
+
+                    <div>
+                      <h6 class="fw-bold mb-1">Best Price Guarantee</h6>
+
+                      <small class="text-muted">
+                        Premium travel packages at affordable prices.
+                      </small>
+                    </div>
+                  </div>
+
+                  <div class="d-flex mb-4">
+                    <i class="fas fa-headset fa-2x text-warning me-3"></i>
+
+                    <div>
+                      <h6 class="fw-bold mb-1">24×7 Customer Support</h6>
+
+                      <small class="text-muted">
+                        Our travel experts are always ready to help.
+                      </small>
+                    </div>
+                  </div>
+
+                  <div class="d-flex">
+                    <i
+                      class="fas fa-plane-departure fa-2x text-danger me-3"
+                    ></i>
+
+                    <div>
+                      <h6 class="fw-bold mb-1">Instant Confirmation</h6>
+
+                      <small class="text-muted">
+                        Receive booking confirmation immediately.
+                      </small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Company Statistics -->
+
+              <div class="card border-0 shadow rounded-4 mb-4">
+                <div class="card-body text-center p-4">
+                  <h3 class="fw-bold mb-4">Explore Globe</h3>
+
+                  <div class="row">
+                    <div class="col-6 mb-4">
+                      <h2 class="text-primary fw-bold">25K+</h2>
+
+                      <small class="text-muted"> Happy Travelers </small>
+                    </div>
+
+                    <div class="col-6 mb-4">
+                      <h2 class="text-success fw-bold">120+</h2>
+
+                      <small class="text-muted"> Destinations </small>
+                    </div>
+
+                    <div class="col-6">
+                      <h2 class="text-warning fw-bold">500+</h2>
+
+                      <small class="text-muted"> Tour Packages </small>
+                    </div>
+
+                    <div class="col-6">
+                      <h2 class="text-danger fw-bold">4.9★</h2>
+
+                      <small class="text-muted"> Rating </small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Popular Destinations -->
+
+              <div class="card border-0 shadow rounded-4">
+                <div class="card-body p-4">
+                  <h4 class="fw-bold mb-4">Popular Destinations</h4>
+
+                  <img
+                    src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=700&q=80"
+                    class="img-fluid rounded-3 mb-3"
+                  />
+
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">🇲🇻 Maldives</li>
+
+                    <li class="list-group-item">🇫🇷 Paris</li>
+
+                    <li class="list-group-item">🇨🇭 Switzerland</li>
+
+                    <li class="list-group-item">🇯🇵 Japan</li>
+
+                    <li class="list-group-item">🇦🇪 Dubai</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Row -->
+        </div>
+        <!-- End Booking Card -->
+      </div>
+      <!-- End Container -->
+    </section>
+
+    <!-- ================= TESTIMONIALS ================= -->
+
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="text-primary fw-bold"> TESTIMONIALS </span>
+
+          <h2 class="fw-bold display-5">What Our Travelers Say</h2>
+
+          <p class="text-muted">
+            Thousands of happy customers trust Explore Globe.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <div class="card border-0 shadow h-100 rounded-4">
+              <div class="card-body p-4">
+                <img
+                  src="https://randomuser.me/api/portraits/women/45.jpg"
+                  class="rounded-circle mb-3"
+                  width="80"
+                />
+
+                <h5>Priya Sharma</h5>
+
+                <p class="text-warning">★★★★★</p>
+
+                <p>
+                  "Our trip to Switzerland was absolutely amazing. Everything
+                  was perfectly organized. Highly recommended!"
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card border-0 shadow h-100 rounded-4">
+              <div class="card-body p-4">
+                <img
+                  src="https://randomuser.me/api/portraits/men/32.jpg"
+                  class="rounded-circle mb-3"
+                  width="80"
+                />
+
+                <h5>Rahul Verma</h5>
+
+                <p class="text-warning">★★★★★</p>
+
+                <p>
+                  "The hotel bookings, flights, and sightseeing were managed
+                  perfectly. A wonderful experience!"
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card border-0 shadow h-100 rounded-4">
+              <div class="card-body p-4">
+                <img
+                  src="https://randomuser.me/api/portraits/women/65.jpg"
+                  class="rounded-circle mb-3"
+                  width="80"
+                />
+
+                <h5>Anjali Singh</h5>
+
+                <p class="text-warning">★★★★★</p>
+
+                <p>
+                  "I booked my honeymoon package from Explore Globe. Everything
+                  exceeded our expectations."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="accordion" id="faq">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button"
+                data-bs-toggle="collapse"
+                data-bs-target="#one"
+              >
+                How do I confirm my booking?
+              </button>
+            </h2>
+
+            <div
+              id="one"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#faq"
+            >
+              <div class="accordion-body">
+                Once you submit the booking form, our travel experts will
+                contact you within 24 hours.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#two"
+              >
+                Can I cancel my booking?
+              </button>
+            </h2>
+
+            <div
+              id="two"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faq"
+            >
+              <div class="accordion-body">
+                Yes. Cancellation depends on your selected travel package.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                data-bs-toggle="collapse"
+                data-bs-target="#three"
+              >
+                Do you provide international packages?
+              </button>
+            </h2>
+
+            <div
+              id="three"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faq"
+            >
+              <div class="accordion-body">
+                Yes. We offer domestic as well as international travel packages.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="py-5 text-center text-white"
+      style="background: linear-gradient(135deg, #0d6efd, #6610f2)"
+    >
+      <div class="container">
+        <h2 class="display-5 fw-bold">Ready For Your Next Adventure?</h2>
+
+        <p class="lead my-4">
+          Book today and explore the world's most beautiful destinations.
         </p>
-    </div>
-</section>
 
-<!-- JAVASCRIPT -->
-<script>
-function validateform() {
-    const tel = document.getElementById("phonenum").value;
-    if (tel.length < 10 || isNaN(tel)) {
-        alert("Phone number must be at least 10 digits and numeric.");
-        return false;
-    }
-    return true;
-}
+        <a href="#bookingForm" class="btn btn-warning btn-lg px-5">
+          Book Your Trip
+        </a>
+      </div>
+    </section>
+    <!-- FOOTER -->
+    <!-- ================= FOOTER ================= -->
 
-document.getElementById("registerForm").addEventListener("submit", async function (e) {
-    e.preventDefault();
-    if (!validateform()) return;
+    <footer class="bg-dark text-light pt-5 pb-3">
+      <div class="container">
+        <div class="row">
+          <!-- Logo -->
 
-    const destinations = [];
-    document.querySelectorAll('input[name="td"]:checked').forEach(el => {
-        destinations.push(el.value);
-    });
+          <div class="col-lg-4 mb-4">
+            <img src="./files/logo.png" height="70" class="mb-3" />
 
-    const data = {
-        name: document.querySelector('input[name="myname1"]').value,
-        email: document.querySelector('input[name="myemail"]').value,
-        phone: document.querySelector('input[name="myphone"]').value,
-        age: document.querySelector('input[name="myage"]').value,
-        gender: document.querySelector('input[name="mygender"]:checked').value,
-        departure: document.querySelector('input[name="departuredate"]').value,
-        returnDate: document.querySelector('input[name="returndate"]').value,
-        destinations: destinations,
-        package: document.querySelector('input[name="locations"]:checked').value
-    };
+            <p class="text-light">
+              Explore Globe helps travelers discover amazing destinations across
+              the world with affordable packages and unforgettable experiences.
+            </p>
 
-    try {
-        const res = await fetch("http://localhost:5000/api/register", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(data)
+            <div class="mt-3">
+              <a href="#" class="text-light me-3 fs-4">
+                <i class="fab fa-facebook"></i>
+              </a>
+
+              <a href="#" class="text-light me-3 fs-4">
+                <i class="fab fa-instagram"></i>
+              </a>
+
+              <a href="#" class="text-light me-3 fs-4">
+                <i class="fab fa-twitter"></i>
+              </a>
+
+              <a href="#" class="text-light fs-4">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5 class="mb-3">Quick Links</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="index.html" class="text-decoration-none text-light"
+                  >Home</a
+                >
+              </li>
+
+              <li>
+                <a href="about.html" class="text-decoration-none text-light"
+                  >About</a
+                >
+              </li>
+
+              <li>
+                <a href="locations.html" class="text-decoration-none text-light"
+                  >Destinations</a
+                >
+              </li>
+
+              <li>
+                <a href="contact.html" class="text-decoration-none text-light"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Popular Tours -->
+
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5 class="mb-3">Popular Tours</h5>
+
+            <ul class="list-unstyled">
+              <li>🇨🇭 Switzerland</li>
+
+              <li>🇫🇷 Paris</li>
+
+              <li>🇦🇪 Dubai</li>
+
+              <li>🇲🇻 Maldives</li>
+
+              <li>🇯🇵 Japan</li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+
+          <div class="col-lg-3">
+            <h5 class="mb-3">Contact</h5>
+
+            <p>
+              <i class="fas fa-map-marker-alt me-2"></i>
+
+              Ghaziabad, Uttar Pradesh
+            </p>
+
+            <p>
+              <i class="fas fa-phone me-2"></i>
+
+              +91 9876543210
+            </p>
+
+            <p>
+              <i class="fas fa-envelope me-2"></i>
+
+              support@exploreglobe.com
+            </p>
+          </div>
+        </div>
+
+        <hr class="border-secondary" />
+
+        <div class="text-center">
+          © 2026 Explore Globe. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+      function validateform() {
+        const tel = document.getElementById("phonenum").value;
+        if (tel.length < 10 || isNaN(tel)) {
+          alert("Phone number must be at least 10 digits and numeric.");
+          return false;
+        }
+        return true;
+      }
+
+      document
+        .getElementById("registerForm")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+          if (!validateform()) return;
+
+          const destinations = [];
+          document
+            .querySelectorAll('input[name="td"]:checked')
+            .forEach((el) => {
+              destinations.push(el.value);
+            });
+
+          const data = {
+            name: document.querySelector('input[name="myname1"]').value,
+            email: document.querySelector('input[name="myemail"]').value,
+            phone: document.querySelector('input[name="myphone"]').value,
+            age: document.querySelector('input[name="myage"]').value,
+            gender: document.querySelector('input[name="mygender"]:checked')
+              .value,
+            departure: document.querySelector('input[name="departuredate"]')
+              .value,
+            returnDate: document.querySelector('input[name="returndate"]')
+              .value,
+            destinations: destinations,
+            package: document.querySelector('input[name="locations"]:checked')
+              .value,
+          };
+
+          try {
+            const res = await fetch("http://localhost:5000/api/register", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(data),
+            });
+
+            const result = await res.json();
+            alert(result.message);
+            document.getElementById("registerForm").reset();
+          } catch {
+            alert("Server error. Please try again later.");
+          }
         });
-
-        const result = await res.json();
-        alert(result.message);
-        document.getElementById("registerForm").reset();
-
-    } catch {
-        alert("Server error. Please try again later.");
-    }
-});
-</script>
-
-</body>
+    </script>
+  </body>
 </html>
-
