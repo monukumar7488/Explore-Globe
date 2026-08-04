@@ -44,15 +44,10 @@ html {
 }
 
 body {
-
     font-family: 'Poppins', sans-serif;
-
     background: var(--light);
-
     color: #222;
-
     overflow-x: hidden;
-
 }
 
 h1,
@@ -61,31 +56,21 @@ h3,
 h4,
 h5,
 h6 {
-
     font-family: 'Montserrat', sans-serif;
-
     font-weight: 700;
-
 }
 
 section {
-
     padding: 90px 0;
-
 }
 
 img {
-
     max-width: 100%;
-
     display: block;
-
 }
 
 a {
-
     text-decoration: none;
-
 }
 
 /* ================= Buttons ================= */
@@ -215,21 +200,16 @@ a {
 }
 
 .hero-overlay {
-
     position: absolute;
-
     inset: 0;
-
     background: rgba(0, 0, 0, .55);
 
 }
 
 .hero-content {
-
-    position: relative;
-
-    z-index: 10;
-
+    position:relative;
+    z-index:2;
+    transform: translateY(45px);   
 }
 
 .hero h1 {
