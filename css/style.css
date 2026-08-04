@@ -159,9 +159,9 @@ a {
 }
 
 .hero-content {
-    position:relative;
-    z-index:2;
-    transform: translateY(45px);   
+    position: relative;
+    z-index: 2;
+    transform: translateY(45px);
 }
 
 .hero h1 {
@@ -437,12 +437,15 @@ footer a:hover {
         height: auto;
         padding-top: 120px;
     }
+
     .hero h1 {
         font-size: 2.8rem;
     }
+
     .booking-card {
         margin-top: 30px;
     }
+
     .display-5 {
         font-size: 2rem;
     }
@@ -452,15 +455,19 @@ footer a:hover {
     .gallery-img {
         height: 220px;
     }
+
     .stats-section h1 {
         font-size: 2.5rem;
     }
+
     .package-card {
         margin-bottom: 30px;
     }
+
     .hero h1 {
         font-size: 2.2rem;
     }
+
     .hero p {
         font-size: 1rem;
     }
@@ -470,13 +477,16 @@ footer a:hover {
     .navbar-brand {
         font-size: 1.2rem;
     }
+
     .hero h1 {
         font-size: 1.8rem;
     }
+
     .btn {
         width: 100%;
         margin-bottom: 10px;
     }
+
     .booking-card .row>div {
         margin-bottom: 12px;
     }
@@ -485,17 +495,39 @@ footer a:hover {
 /* ABOUT HERO */
 
 .about-hero {
+    position: relative;
     height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background:
-        linear-gradient(rgba(0, 0, 0, .55),
-            rgba(0, 0, 0, .55)),
-        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80");
+    overflow: hidden;
 
-    background-size: cover;
-    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-hero video {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: -2;
+}
+
+.about-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .55);
+    z-index: -1;
+}
+
+.about-hero .container {
+    position: relative;
+    z-index: 2;
 }
 
 /* ================= TEAM ================= */
@@ -531,6 +563,7 @@ footer a:hover {
         font-size: 2.5rem;
     }
 }
+
 .destination-card {
     border-radius: 20px;
     overflow: hidden;
@@ -544,34 +577,35 @@ footer a:hover {
 
 .destination-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 45px rgba(0,0,0,0.18) !important;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18) !important;
 }
 
 .destination-card .badge {
     font-size: 0.8rem;
 }
+
 /* CONTACT */
 
-.contact-card{
-    border-radius:20px;
-    transition:.35s ease;
+.contact-card {
+    border-radius: 20px;
+    transition: .35s ease;
 }
 
-.contact-card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 20px 40px rgba(0,0,0,.15)!important;
+.contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .15) !important;
 }
 
-.contact-card i{
-    transition:.3s;
+.contact-card i {
+    transition: .3s;
 }
 
-.contact-card:hover i{
-    transform:scale(1.15);
+.contact-card:hover i {
+    transform: scale(1.15);
 }
 
 .form-control,
-textarea{
-    border-radius:12px;
-    padding:14px;
+textarea {
+    border-radius: 12px;
+    padding: 14px;
 }
