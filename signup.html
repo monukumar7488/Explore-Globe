@@ -43,7 +43,9 @@ Join Explore Globe and start your journey.
 
 </div>
 
-<form>
+<div id="signupAlert" class="alert d-none" role="alert"></div>
+
+<form id="signupForm">
 
 <div class="row">
 
@@ -51,8 +53,10 @@ Join Explore Globe and start your journey.
 
 <input
 type="text"
+id="signupFirstName"
 class="form-control"
 placeholder="First Name"
+autocomplete="given-name"
 required>
 
 </div>
@@ -61,8 +65,10 @@ required>
 
 <input
 type="text"
+id="signupLastName"
 class="form-control"
 placeholder="Last Name"
+autocomplete="family-name"
 required>
 
 </div>
@@ -73,8 +79,10 @@ required>
 
 <input
 type="email"
+id="signupEmail"
 class="form-control"
 placeholder="Email Address"
+autocomplete="email"
 required>
 
 </div>
@@ -83,17 +91,19 @@ required>
 
 <input
 type="tel"
+id="signupPhone"
 class="form-control"
 placeholder="Phone Number"
+autocomplete="tel"
 required>
 
 </div>
 
 <div class="mb-3">
 
-<select class="form-select">
+<select id="signupCountry" class="form-select">
 
-<option selected>Select Country</option>
+<option value="" selected>Select Country</option>
 
 <option>India</option>
 <option>United States</option>
@@ -121,7 +131,9 @@ class="form-control">
 type="password"
 id="signupPassword"
 class="form-control"
-placeholder="Password">
+placeholder="Password"
+autocomplete="new-password"
+required>
 
 <button
 class="btn btn-light"
@@ -140,8 +152,11 @@ id="toggleSignupPassword">
 
 <input
 type="password"
+id="signupConfirm"
 class="form-control"
-placeholder="Confirm Password">
+placeholder="Confirm Password"
+autocomplete="new-password"
+required>
 
 </div>
 
@@ -150,7 +165,8 @@ placeholder="Confirm Password">
 <input
 class="form-check-input"
 type="checkbox"
-id="terms">
+id="terms"
+required>
 
 <label class="form-check-label" for="terms">
 
@@ -161,6 +177,8 @@ I agree to the Terms & Conditions
 </div>
 
 <button
+id="signupSubmit"
+type="submit"
 class="btn btn-primary w-100">
 
 Create Account
@@ -187,6 +205,8 @@ Login
 
 </div>
 
+<script src="js/session.js"></script>
+<script src="js/auth-forms.js"></script>
 <script src="js/auth.js"></script>
 
 </body>

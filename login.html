@@ -45,7 +45,9 @@ Login to continue your journey
 
 </div>
 
-<form>
+<div id="loginAlert" class="alert d-none" role="alert"></div>
+
+<form id="loginForm">
 
 <div class="mb-3">
 
@@ -53,8 +55,11 @@ Login to continue your journey
 
 <input
 type="email"
+id="loginEmail"
 class="form-control"
-placeholder="Enter email">
+placeholder="Enter email"
+autocomplete="email"
+required>
 
 </div>
 
@@ -68,7 +73,9 @@ placeholder="Enter email">
 type="password"
 id="password"
 class="form-control"
-placeholder="Enter password">
+placeholder="Enter password"
+autocomplete="current-password"
+required>
 
 <button
 class="btn btn-light"
@@ -87,7 +94,7 @@ id="togglePassword">
 
 <div>
 
-<input type="checkbox">
+<input type="checkbox" id="rememberMe">
 
 Remember me
 
@@ -102,6 +109,8 @@ Forgot Password?
 </div>
 
 <button
+id="loginSubmit"
+type="submit"
 class="btn btn-primary w-100 mt-4">
 
 Login
@@ -148,6 +157,8 @@ Register
 
 </div>
 
+<script src="js/session.js"></script>
+<script src="js/auth-forms.js"></script>
 <script src="js/auth.js"></script>
 
 </body>
