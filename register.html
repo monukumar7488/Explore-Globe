@@ -196,6 +196,8 @@
               <div class="bg-white rounded-4 p-4 shadow">
                 <h2 class="fw-bold mb-4">Complete Your Booking</h2>
 
+                <div id="bookingAlert" class="alert d-none" role="alert"></div>
+
                 <form id="registerForm">
                   <div class="row">
                     <div class="col-md-6 mb-3">
@@ -898,59 +900,8 @@
     </footer>
 
     <!-- JAVASCRIPT -->
-    <script>
-      function validateform() {
-        const tel = document.getElementById("phonenum").value;
-        if (tel.length < 10 || isNaN(tel)) {
-          alert("Phone number must be at least 10 digits and numeric.");
-          return false;
-        }
-        return true;
-      }
-
-      document
-        .getElementById("registerForm")
-        .addEventListener("submit", async function (e) {
-          e.preventDefault();
-          if (!validateform()) return;
-
-          const destinations = [];
-          document
-            .querySelectorAll('input[name="td"]:checked')
-            .forEach((el) => {
-              destinations.push(el.value);
-            });
-
-          const data = {
-            name: document.querySelector('input[name="myname1"]').value,
-            email: document.querySelector('input[name="myemail"]').value,
-            phone: document.querySelector('input[name="myphone"]').value,
-            age: document.querySelector('input[name="myage"]').value,
-            gender: document.querySelector('input[name="mygender"]:checked')
-              .value,
-            departure: document.querySelector('input[name="departuredate"]')
-              .value,
-            returnDate: document.querySelector('input[name="returndate"]')
-              .value,
-            destinations: destinations,
-            package: document.querySelector('input[name="locations"]:checked')
-              .value,
-          };
-
-          try {
-            const res = await fetch("http://localhost:5000/api/register", {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify(data),
-            });
-
-            const result = await res.json();
-            alert(result.message);
-            document.getElementById("registerForm").reset();
-          } catch {
-            alert("Server error. Please try again later.");
-          }
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/session.js"></script>
+    <script src="js/booking.js"></script>
   </body>
 </html>

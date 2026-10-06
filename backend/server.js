@@ -4,6 +4,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const destinationRoutes = require('./routes/destinations');
 const authRoutes = require('./routes/auth');
+const bookingRoutes = require('./routes/bookings');
 
 if (!process.env.MONGODB_URI || !process.env.JWT_SECRET) {
   console.error('❌ Missing MONGODB_URI or JWT_SECRET in your .env file');
@@ -18,6 +19,7 @@ app.use(express.json());
 app.get('/api/health', (req, res) => res.json({ status: 'ok' }));
 app.use('/api/destinations', destinationRoutes);
 app.use('/api/auth', authRoutes);
+app.use('/api/bookings', bookingRoutes);
 
 app.use((req, res) => res.status(404).json({ message: 'Route not found' }));
 
